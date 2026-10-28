@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/raidenbg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/lg"
+            android:background="@color/black"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/panah_left"
+                android:contentDescription="Back Icon"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/mortal_combat_logo"
+                android:contentDescription="App Logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHARACTER"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/cinzel"/>
+        </LinearLayout>
+
+        <!-- Character Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white_transparent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_margin="@dimen/lg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- ImageView: Gambar Karakter -->
+                <ImageView
+                    android:id="@+id/ivKarakter"
+                    android:layout_width="100dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/subzero"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Character Image" />
+
+                <!-- TextView: Deskripsi Karakter -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SUB-ZERO"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="@font/cinzel"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/md"/>
+
+                    <TextView
+                        android:id="@+id/tvDeskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grandmaster of the Lin Kuei"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="@font/cinzel"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/md"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md"
+            android:layout_marginLeft="@dimen/md"
+            android:layout_marginRight="@dimen/md"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#80FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Judul -->
+
+                <!-- List Combo -->
+                <TextView
+                    android:id="@+id/tvComboTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cinzel"
+                    android:text="Combo"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCombo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <!-- Contoh Button Combo -->
+                    <Button
+                        android:id="@+id/btnCombo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Combo 1"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvCombo1Details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Teknis Combo Mortal Kombat"
+                            android:fontFamily="@font/cinzel_font"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnCombo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Combo 2"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvCombo2Details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Teknis Combo Mortal Kombat"
+                            android:fontFamily="@font/cinzel_font"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnCombo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Combo 3"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvCombo3Details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Teknis Combo Mortal Kombat"
+                            android:fontFamily="@font/cinzel_font"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md"
+            android:layout_marginLeft="@dimen/md"
+            android:layout_marginRight="@dimen/md"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#80FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Judul -->
+                <TextView
+                    android:id="@+id/tvFatality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cinzel"
+                    android:text="Fatality"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFatality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <!-- Contoh Button Fatality -->
+                    <Button
+                        android:id="@+id/btnFatality1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Fatality 1"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvFatality1Details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Teknis Fatality Mortal Kombat"
+                        android:fontFamily="@font/cinzel_font"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnFatality2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Fatality 2"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvFatality2Details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Teknis Fatality Mortal Kombat"
+                        android:fontFamily="@font/cinzel_font"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="@dimen/md"
+            android:layout_marginRight="@dimen/md"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#80FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvAnimality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animality"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cinzel" />
+
+                <LinearLayout
+                    android:id="@+id/layoutAnimality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnAnimality"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Animality"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/cinzel"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAnimalityDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Teknis Animality Mortal Kombat"
+                        android:fontFamily="@font/cinzel_font"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="@dimen/md"
+            android:layout_marginRight="@dimen/md"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#80FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvLore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lore"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cinzel" />
+
+                <LinearLayout
+                    android:id="@+id/layoutLore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvLoreDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="LORE KARAKTER"
+                        android:fontFamily="@font/cinzel_font"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
